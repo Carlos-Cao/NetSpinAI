@@ -1,13 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-
-interface Message {
-  id: string;
-  text: string;
-  isUser: boolean;
-  timestamp: Date;
-}
+import { Message } from "../types/types";
 
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
