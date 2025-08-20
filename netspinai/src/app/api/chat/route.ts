@@ -1,12 +1,6 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { NextRequest, NextResponse } from 'next/server';
-
-interface ChatMessage {
-  id: string;
-  text: string;
-  isUser: boolean;
-  timestamp: Date;
-}
+import { ChatMessage } from '../../../types/types';
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 
